@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://user.ebay" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://user.ebay" xmlns:intf="http://user.ebay" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://user.ebay" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="updateUserProfile">
+    <complexType>
+     <sequence>
+      <element name="userid" type="xsd:int"/>
+      <element name="userbday" type="xsd:string"/>
+      <element name="ebayhandle" type="xsd:string"/>
+      <element name="location" type="xsd:string"/>
+      <element name="contact" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateUserProfileResponse">
+    <complexType>
+     <sequence>
+      <element name="updateUserProfileReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getUserProfile">
+    <complexType>
+     <sequence>
+      <element name="userid" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getUserProfileResponse">
+    <complexType>
+     <sequence>
+      <element name="getUserProfileReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getUserProfileResponse">
+
+      <wsdl:part element="impl:getUserProfileResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateUserProfileRequest">
+
+      <wsdl:part element="impl:updateUserProfile" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getUserProfileRequest">
+
+      <wsdl:part element="impl:getUserProfile" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateUserProfileResponse">
+
+      <wsdl:part element="impl:updateUserProfileResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="userhome">
+
+      <wsdl:operation name="updateUserProfile">
+
+         <wsdl:input message="impl:updateUserProfileRequest" name="updateUserProfileRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:updateUserProfileResponse" name="updateUserProfileResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getUserProfile">
+
+         <wsdl:input message="impl:getUserProfileRequest" name="getUserProfileRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getUserProfileResponse" name="getUserProfileResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="userhomeSoapBinding" type="impl:userhome">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="updateUserProfile">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateUserProfileRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateUserProfileResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getUserProfile">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getUserProfileRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getUserProfileResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="userhomeService">
+
+      <wsdl:port binding="impl:userhomeSoapBinding" name="userhome">
+
+         <wsdlsoap:address location="http://localhost:8080/ebayServices/services/userhome"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

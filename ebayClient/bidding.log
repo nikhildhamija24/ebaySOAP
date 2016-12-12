@@ -1,0 +1,6 @@
+23:33:21.750 INFO  POST /addToBid by 11 called at 12/10/2016, 11:33:21 PM
+23:33:22.119 INFO  POST /addToBid by 11 called at 12/10/2016, 11:33:22 PM
+23:33:24.747 INFO  GET /bidCart by 11 called at 12/09/2016, 11:33:24 PM
+23:33:28.865 INFO  GET /bidCart by 17 called at 12/01/2016, 11:33:28 PM
+23:34:05.807 INFO  POST /addToBid by 12 called at 11/30/2016, 11:34:05 PM
+23:34:09.182 INFO  POST /addToBid by 11 called at 11/25/2016, 11:34:09 PM

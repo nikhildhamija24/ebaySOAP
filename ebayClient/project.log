@@ -1,0 +1,9 @@
+23:33:21.750 INFO  GET /cartPage by 11 called at 12/11/2016, 11:33:21 PM 
+23:33:22.119 INFO  GET /getCart by 11 called at 12/11/2016, 11:33:22 PM 
+23:33:24.747 INFO  GET /product by 11 called at 12/11/2016, 11:33:24 PM 
+23:33:28.865 INFO  GET /allProds by 11 called at 12/11/2016, 11:33:28 PM 
+23:34:05.807 INFO  GET /product by 11 called at 12/11/2016, 11:34:05 PM 
+23:34:09.182 INFO  GET /allProds by 11 called at 12/11/2016, 11:34:09 PM 
+23:38:01.964 INFO  GET /product by 17 called at 12/11/2016, 11:38:01 PM 
+23:38:04.935 INFO  GET /allProds by 17 called at 12/11/2016, 11:38:04 PM 
+23:38:37.203 INFO  GET /userProfile by 17 called at 12/11/2016, 11:38:37 PM 

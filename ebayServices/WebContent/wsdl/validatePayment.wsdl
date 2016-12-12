@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://paymentService" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://paymentService" xmlns:intf="http://paymentService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://paymentService" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="payment">
+    <complexType>
+     <sequence>
+      <element name="userid" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="paymentResponse">
+    <complexType>
+     <sequence>
+      <element name="paymentReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="paymentResponse">
+
+      <wsdl:part element="impl:paymentResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="paymentRequest">
+
+      <wsdl:part element="impl:payment" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="validatePayment">
+
+      <wsdl:operation name="payment">
+
+         <wsdl:input message="impl:paymentRequest" name="paymentRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:paymentResponse" name="paymentResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="validatePaymentSoapBinding" type="impl:validatePayment">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="payment">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="paymentRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="paymentResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="validatePaymentService">
+
+      <wsdl:port binding="impl:validatePaymentSoapBinding" name="validatePayment">
+
+         <wsdlsoap:address location="http://localhost:8080/ebayServices/services/validatePayment"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
